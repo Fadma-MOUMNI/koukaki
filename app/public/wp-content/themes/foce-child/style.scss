@@ -1,0 +1,670 @@
+/*
+ Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
+ Theme URI: https://www.koukaki.local
+ Author: Studio Koukaki
+ Author URI: https://www.koukaki.local
+ Template: foce
+ Description: Theme enfant à l'ocasion de la nomination aux Oscars Shorts
+ Version: 0.1
+ */
+
+
+
+
+@import'keyframes';
+@import'variables';
+
+
+
+//***************************************************les classes d'animations ***//
+.animLogo {
+    animation: $animationUP, $animationFloat ;
+
+}
+
+.animfloat {
+    animation: $animationFloat
+}
+
+
+.animUp {
+    animation: $animationUP ;
+
+}
+
+.animDown {
+    animation: $animationDown;
+
+}
+
+//les sections en fadein 
+.site-main {
+    animation: $animationFadin;
+}
+
+
+
+
+.story__article::after,
+.story h2::after,
+#studio h2::after,
+#studio h2::before,
+.site-footer::after,
+.site-footer::before,
+ul::after {
+    animation: $animationFlower ;
+}
+
+.story__article::before,
+h3,
+#characters,
+#studio h2,
+#place {
+    animation: $animationUP ;
+}
+
+
+/* le style des titres avant l'apparition  */
+.title {
+    top: 80px;
+    position: relative;
+    opacity: 0;
+
+}
+
+/* apparition au scroll des titres */
+.title_active {
+    top: 0px;
+    opacity: 1;
+    transition: 2s;
+}
+
+
+
+
+
+
+// *********************************************************************************Banner_la video_et_Logo 
+.banner {
+    min-height: 796px !important;
+    background-image: none;
+
+
+    #myVideo {
+        width: 100%;
+        height: 806px;
+        position: absolute;
+        display: block;
+        animation: $animationDown;
+
+    }
+
+    .contener__logo {
+        animation: $animationFloat;
+        display: flex;
+        justify-content: center;
+        width: 70em;
+
+        .banner__logo {
+            z-index: 2;
+
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+//************************************************************************************Les perssonages...
+.story {
+    top: 150px;
+
+    #characters {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+
+        h3 {
+            width: 40%;
+        }
+
+        .other-characters {
+            display: flex;
+            flex-wrap: nowrap;
+
+        }
+
+
+
+        div {
+
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            align-content: flex-start;
+            align-items: center;
+        }
+
+    }
+
+
+
+}
+
+//****************************************swiper 
+.swiper {
+
+    width: 70%;
+
+    .swiper-slide {
+
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+
+
+        figure {
+            display: block;
+            width: 100%;
+
+            img {
+                max-width: none;
+                width: 270px;
+                height: 270px;
+            }
+
+            figcaption {
+
+                font-size: 20px;
+            }
+        }
+
+        .swiper-wrapper {
+
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+//******************************************************************************************Lieu/les nuages 
+
+
+#place {
+    position: relative;
+    overflow-x: hidden;
+    position: relative;
+    background-image: url("images/Studio_Koukaki-image_place.png") !important;
+    //z-index: -1;
+
+    .big__cloud {
+        filter: blur(20px);
+        top: 90px;
+        width: 268px;
+        height: 90px;
+        left: 960px;
+        position: fixed;
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+    .little__cloud {
+        z-index: 222;
+        filter: blur(12px);
+        top: 250px;
+        width: 107px;
+        height: 56px;
+        position: absolute;
+        left: 700px;
+
+
+
+
+    }
+
+
+}
+
+
+
+//**************************************************************************************Oscras
+.nomination {
+    padding: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+
+
+        h3 {
+            width: 50%;
+            position: absolute;
+            top: 12%;
+
+            line-height: 3.2rem;
+            text-align: left;
+
+
+        }
+
+    }
+}
+
+//*****************************************************************************************Menu-burger
+
+
+.nav-menu {
+
+    display: flex !important;
+}
+
+
+// ****************************************Menu-déroulant-(MODEL)..
+
+.modal {
+    display: block;
+
+    background-color: #FFF5E9;
+
+    width: 100%;
+
+    //Icône hamburger
+    &__burger {
+
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        gap: 8px;
+        width: 40px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        right: 3em;
+        cursor: pointer;
+
+        // les lignes d'icône hamburger
+        .line {
+            height: 2px;
+            background-color: #000;
+            display: block;
+            width: 100%;
+            margin: 0;
+            transition: all .3s ease-in-out;
+        }
+
+        // le bouton fermeture du menu (X)
+        &.close {
+
+            .line {
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:first-child {
+                    transform: rotate(45deg) translate3d(8px, 6px, 0);
+                }
+
+                &:last-child {
+                    transform: rotate(-45deg) translate3d(8px, -6px, 0);
+                }
+
+            }
+        }
+    }
+
+    .modal__content {
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 93vh;
+
+        justify-content: space-between;
+
+
+        ul {
+            margin-top: 30px;
+            gap: 20px;
+
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+
+            a {
+                font-size: 3.1rem;
+
+                &:hover {
+                    filter: drop-shadow(0px 0px 5px #ff5c00);
+                }
+
+
+            }
+
+
+
+        }
+
+        img {
+            margin-top: 40px;
+            margin-left: 92px;
+            width: 160px;
+            filter: drop-shadow(0px 0px 5px #ff5c00);
+
+        }
+
+
+        .menu__footer {
+            margin: 55px;
+            font-size: 1rem;
+        }
+
+
+
+
+        //****************************************************Ajout Les chats et  les fleurs  au menu
+
+
+        &__story {
+            &::before {
+
+
+                content: url(images/Kawaneko.png);
+                position: absolute;
+                right: 20em;
+                animation: $animationFloat;
+
+
+
+
+            }
+
+            &::after {
+
+
+                content: url(images/Sunflower.png);
+                position: absolute;
+                left: 30em;
+                animation: $animationFlower;
+                top: -2em;
+
+
+
+
+            }
+        }
+
+
+
+
+        &__characters {
+
+            &::after {
+
+
+                content: url(images/random_flower.png);
+                transform: scale(0.5);
+                position: absolute;
+                left: 53em;
+                animation: $animationLittleFlower ;
+                top: 2em;
+
+            }
+
+
+            &::before {
+                content: url(images/orchid.png);
+
+                position: absolute;
+                left: -46em;
+                top: -12em;
+
+                animation: $animationFlower ;
+
+
+
+            }
+
+
+        }
+
+
+
+
+
+        &__place {
+            &::before {
+
+
+                content: url(images/flower.png);
+                position: absolute;
+                right: 33em;
+                animation: $animationLittleFlower;
+
+
+
+
+            }
+
+            &::after {
+
+
+                content: url(images/Jaakuna-1.png);
+                position: absolute;
+                left: 25em;
+                animation: $animationFloat;
+                top: -2em;
+
+
+
+
+            }
+        }
+
+
+
+        &__footer {
+
+
+
+            &::before {
+
+                transform: translate(-189px, 18px);
+                left: -30em;
+                top: 7em;
+                content: url(images/Orenjiiro-1.png);
+                position: absolute;
+
+                animation: $animationFloat;
+
+
+
+            }
+
+            &::after {
+
+
+
+                content: url(images/Hibiscus.png);
+                position: absolute;
+                left: 50em;
+
+                bottom: -40em;
+                animation: $animationBigFlower;
+
+
+
+
+
+
+
+            }
+
+
+        }
+
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//*************************************************************Médias Queries MOBILE***********************//
+
+@media only screen and (max-width: 425px) {
+
+    //header
+    .modal__burger {
+        top: 8px;
+    }
+
+    .main-navigation {
+
+        height: 42px;
+
+        .modal__content {
+
+            height: 95vh;
+
+            &::after {
+                left: -7em;
+            }
+
+            img {
+                top: 2px;
+                margin-left: 2px !important;
+            }
+
+        }
+
+        ul {
+            height: 96%;
+            width: 100%;
+            justify-content: flex-start;
+
+            li {
+                a {
+                    font-size: 1rem !important;
+                }
+            }
+
+
+
+            .site-title {
+
+                display: block !important;
+                font-size: 15px;
+
+
+            }
+        }
+    }
+
+    header {
+        //width: 50%;
+        top: 10px;
+        height: 30px;
+    }
+
+    // la vidéo 
+
+    .site-main {
+        .banner {
+            min-height: 240px !important;
+            background-image: url(images/banner.png);
+
+            #myVideo {
+                display: none !important;
+            }
+        }
+    }
+
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .nomination {
+        display: flex;
+        flex-direction: column !important;
+
+        &__title {
+            h3 {
+                width: 87%;
+                font-size: 16px;
+                line-height: 1.6rem;
+            }
+        }
+    }
+
+    .story {
+        top: 60px;
+
+        #characters {
+            width: 100%;
+
+            h3 {
+                width: 100% !important;
+
+            }
+
+        }
+
+
+    }
+
+    .swiper {
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    #studio {
+
+
+        h2 {
+            overflow: visible;
+        }
+
+
+    }
+}

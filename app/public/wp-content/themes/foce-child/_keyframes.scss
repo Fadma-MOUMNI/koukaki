@@ -1,0 +1,128 @@
+// @keyframes pour faire flotter le LOGO et les chats 
+
+
+@keyframes float {
+    0% {
+        transform: translate3d(6px, 6px, 0);
+    }
+
+    12% {
+        transform: translate3d(0px, 6px, 0);
+    }
+
+    24% {
+        transform: translate3d(6px, -4px, 0);
+    }
+
+    36% {
+        transform: translate3d(6px, 0px, 0);
+    }
+
+    48% {
+        transform: translate3d(-4px, -6px, 0);
+    }
+
+    60% {
+        transform: translate3d(0px, -4px, 0);
+    }
+
+    72% {
+        transform: translate3d(-8px, 6px, 0);
+    }
+
+    84% {
+        transform: translate3d(-4px, 0px, 0);
+    }
+
+    100% {
+        transform: translate3d(6px, 6px, 0);
+    }
+}
+
+
+//@keyframes de Transition en fondu
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+
+    }
+}
+
+
+// ******@keyframes des fleurs qui tournent  sur elle meme
+
+
+@keyframes rotateFlower {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// @keyframes des fleurs qui tournent  sur elle meme plus reduire la taille (pour les petites fleurs du menu)
+
+
+@keyframes rotateLittelFlower {
+    from {
+        transform: rotate(0deg) scale(0.3);
+    }
+
+    to {
+        transform: rotate(360deg)scale(0.3);
+    }
+}
+
+
+// @keyframes des fleurs qui tournent  sur elle meme plus grandire la taille(pour les grandes fleurs du menu)
+
+@keyframes rotateBigFlower {
+    from {
+        transform: rotate(0deg) scale(2);
+    }
+
+    to {
+        transform: rotate(360deg)scale(2);
+    }
+}
+
+//**@keyframes  pour la banner (effet descendre)
+
+@keyframes slideDown {
+    from {
+
+
+        transform: translateY(-100%);
+    }
+
+    to {
+
+
+        transform: translateY(0%);
+    }
+}
+
+//***@keyframes  effet monter 
+
+
+@keyframes slideUp {
+    from {
+
+
+        transform: translateY(100%);
+    }
+
+    to {
+
+
+        transform: translateY(0%);
+    }
+}

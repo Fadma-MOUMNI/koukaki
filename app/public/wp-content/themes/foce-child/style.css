@@ -1,0 +1,451 @@
+@charset "UTF-8";
+/*
+ Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
+ Theme URI: https://www.koukaki.local
+ Author: Studio Koukaki
+ Author URI: https://www.koukaki.local
+ Template: foce
+ Description: Theme enfant à l'ocasion de la nomination aux Oscars Shorts
+ Version: 0.1
+ */
+@keyframes float {
+  0% {
+    transform: translate3d(6px, 6px, 0);
+  }
+  12% {
+    transform: translate3d(0px, 6px, 0);
+  }
+  24% {
+    transform: translate3d(6px, -4px, 0);
+  }
+  36% {
+    transform: translate3d(6px, 0px, 0);
+  }
+  48% {
+    transform: translate3d(-4px, -6px, 0);
+  }
+  60% {
+    transform: translate3d(0px, -4px, 0);
+  }
+  72% {
+    transform: translate3d(-8px, 6px, 0);
+  }
+  84% {
+    transform: translate3d(-4px, 0px, 0);
+  }
+  100% {
+    transform: translate3d(6px, 6px, 0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotateFlower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateLittelFlower {
+  from {
+    transform: rotate(0deg) scale(0.3);
+  }
+  to {
+    transform: rotate(360deg) scale(0.3);
+  }
+}
+@keyframes rotateBigFlower {
+  from {
+    transform: rotate(0deg) scale(2);
+  }
+  to {
+    transform: rotate(360deg) scale(2);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+.animLogo {
+  animation: slideUp 2s ease-in-out forwards, float 6s 2s infinite ease-in-out;
+}
+
+.animfloat {
+  animation: float 6s 2s infinite ease-in-out;
+}
+
+.animUp {
+  animation: slideUp 2s ease-in-out forwards;
+}
+
+.animDown {
+  animation: slideDown 2s ease-in-out forwards;
+}
+
+.site-main {
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+.story__article::after,
+.story h2::after,
+#studio h2::after,
+#studio h2::before,
+.site-footer::after,
+.site-footer::before,
+ul::after {
+  animation: rotateFlower 20s linear infinite;
+}
+
+.story__article::before,
+h3,
+#characters,
+#studio h2,
+#place {
+  animation: slideUp 2s ease-in-out forwards;
+}
+
+/* le style des titres avant l'apparition  */
+.title {
+  top: 80px;
+  position: relative;
+  opacity: 0;
+}
+
+/* apparition au scroll des titres */
+.title_active {
+  top: 0px;
+  opacity: 1;
+  transition: 2s;
+}
+
+.banner {
+  min-height: 796px !important;
+  background-image: none;
+}
+.banner #myVideo {
+  width: 100%;
+  height: 806px;
+  position: absolute;
+  display: block;
+  animation: slideDown 2s ease-in-out forwards;
+}
+.banner .contener__logo {
+  animation: float 6s 2s infinite ease-in-out;
+  display: flex;
+  justify-content: center;
+  width: 70em;
+}
+.banner .contener__logo .banner__logo {
+  z-index: 2;
+}
+
+.story {
+  top: 150px;
+}
+.story #characters {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.story #characters h3 {
+  width: 40%;
+}
+.story #characters .other-characters {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.story #characters div {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.swiper {
+  width: 70%;
+}
+.swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+.swiper .swiper-slide figure {
+  display: block;
+  width: 100%;
+}
+.swiper .swiper-slide figure img {
+  max-width: none;
+  width: 270px;
+  height: 270px;
+}
+.swiper .swiper-slide figure figcaption {
+  font-size: 20px;
+}
+.swiper .swiper-slide .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+#place {
+  position: relative;
+  overflow-x: hidden;
+  position: relative;
+  background-image: url("images/Studio_Koukaki-image_place.png") !important;
+}
+#place .big__cloud {
+  filter: blur(20px);
+  top: 90px;
+  width: 268px;
+  height: 90px;
+  left: 960px;
+  position: fixed;
+  transition: transform 0.3s ease-in-out;
+}
+#place .little__cloud {
+  z-index: 222;
+  filter: blur(12px);
+  top: 250px;
+  width: 107px;
+  height: 56px;
+  position: absolute;
+  left: 700px;
+}
+
+.nomination {
+  padding: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.nomination__title h3 {
+  width: 50%;
+  position: absolute;
+  top: 12%;
+  line-height: 3.2rem;
+  text-align: left;
+}
+
+.nav-menu {
+  display: flex !important;
+}
+
+.modal {
+  display: block;
+  background-color: #FFF5E9;
+  width: 100%;
+}
+.modal__burger {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 8px;
+  width: 40px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 3em;
+  cursor: pointer;
+}
+.modal__burger .line {
+  height: 2px;
+  background-color: #000;
+  display: block;
+  width: 100%;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+.modal__burger.close .line:nth-child(2) {
+  opacity: 0;
+}
+.modal__burger.close .line:first-child {
+  transform: rotate(45deg) translate3d(8px, 6px, 0);
+}
+.modal__burger.close .line:last-child {
+  transform: rotate(-45deg) translate3d(8px, -6px, 0);
+}
+.modal .modal__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 93vh;
+  justify-content: space-between;
+}
+.modal .modal__content ul {
+  margin-top: 30px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+.modal .modal__content ul a {
+  font-size: 3.1rem;
+}
+.modal .modal__content ul a:hover {
+  filter: drop-shadow(0px 0px 5px #ff5c00);
+}
+.modal .modal__content img {
+  margin-top: 40px;
+  margin-left: 92px;
+  width: 160px;
+  filter: drop-shadow(0px 0px 5px #ff5c00);
+}
+.modal .modal__content .menu__footer {
+  margin: 55px;
+  font-size: 1rem;
+}
+.modal .modal__content__story::before {
+  content: url(images/Kawaneko.png);
+  position: absolute;
+  right: 20em;
+  animation: float 6s 2s infinite ease-in-out;
+}
+.modal .modal__content__story::after {
+  content: url(images/Sunflower.png);
+  position: absolute;
+  left: 30em;
+  animation: rotateFlower 20s linear infinite;
+  top: -2em;
+}
+.modal .modal__content__characters::after {
+  content: url(images/random_flower.png);
+  transform: scale(0.5);
+  position: absolute;
+  left: 53em;
+  animation: rotateLittelFlower 20s linear infinite;
+  top: 2em;
+}
+.modal .modal__content__characters::before {
+  content: url(images/orchid.png);
+  position: absolute;
+  left: -46em;
+  top: -12em;
+  animation: rotateFlower 20s linear infinite;
+}
+.modal .modal__content__place::before {
+  content: url(images/flower.png);
+  position: absolute;
+  right: 33em;
+  animation: rotateLittelFlower 20s linear infinite;
+}
+.modal .modal__content__place::after {
+  content: url(images/Jaakuna-1.png);
+  position: absolute;
+  left: 25em;
+  animation: float 6s 2s infinite ease-in-out;
+  top: -2em;
+}
+.modal .modal__content__footer::before {
+  transform: translate(-189px, 18px);
+  left: -30em;
+  top: 7em;
+  content: url(images/Orenjiiro-1.png);
+  position: absolute;
+  animation: float 6s 2s infinite ease-in-out;
+}
+.modal .modal__content__footer::after {
+  content: url(images/Hibiscus.png);
+  position: absolute;
+  left: 50em;
+  bottom: -40em;
+  animation: rotateBigFlower 20s linear infinite;
+}
+
+@media only screen and (max-width: 425px) {
+  .modal__burger {
+    top: 8px;
+  }
+  .main-navigation {
+    height: 42px;
+  }
+  .main-navigation .modal__content {
+    height: 95vh;
+  }
+  .main-navigation .modal__content::after {
+    left: -7em;
+  }
+  .main-navigation .modal__content img {
+    top: 2px;
+    margin-left: 2px !important;
+  }
+  .main-navigation ul {
+    height: 96%;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .main-navigation ul li a {
+    font-size: 1rem !important;
+  }
+  .main-navigation ul .site-title {
+    display: block !important;
+    font-size: 15px;
+  }
+  header {
+    top: 10px;
+    height: 30px;
+  }
+  .site-main .banner {
+    min-height: 240px !important;
+    background-image: url(images/banner.png);
+  }
+  .site-main .banner #myVideo {
+    display: none !important;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  .nomination {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .nomination__title h3 {
+    width: 87%;
+    font-size: 16px;
+    line-height: 1.6rem;
+  }
+  .story {
+    top: 60px;
+  }
+  .story #characters {
+    width: 100%;
+  }
+  .story #characters h3 {
+    width: 100% !important;
+  }
+  .swiper img {
+    width: 200px;
+    height: 200px;
+  }
+  #studio h2 {
+    overflow: visible;
+  }
+}/*# sourceMappingURL=style.css.map */
