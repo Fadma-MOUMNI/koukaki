@@ -1,106 +1,73 @@
-                            KOUKAKI
-=> Projet 9 koukaki (Openclassrooms):
 
-Améliorer le site d'un studio d'animation avec JavaScript et des animations CSS (parcours Developpeur Wordpress avec OpenClassrooms )
+                            
+                     # 🎬 Koukaki — Dynamiser un site WordPress avec JavaScript & CSS
 
+Projet réalisé dans le cadre de la formation **Développeur WordPress** chez [OpenClassrooms](https://openclassrooms.com/).
 
+---
 
-=> Mission de ce projet: 
+## 🎯 Objectif
 
-La mission est de dynamiser le site internet du studio d’animation Koukaki, dont le dernier film a été nominé aux Oscars du meilleur court-métrage d’animation !
+Améliorer et dynamiser le site vitrine du **studio d’animation Koukaki**, dont le dernier film a été nominé aux Oscars 🎉
 
+### Objectifs techniques :
+- Ajouter des **animations fluides** et **effets visuels immersifs**
+- Rendre le site plus **interactif**, **moderne** et **responsive**
+- Utiliser **CSS / JavaScript / jQuery** sans toucher à la structure back-end
 
+---
 
-=> Déroulement du projet:
+## 🧩 Maquette
 
-1 - Installation de WordPress
+La maquette de référence a été fournie sur Figma et respectée dans sa mise en œuvre.  
+🖌️ Animations, éléments flottants, transitions et structure mobile-first appliqués fidèlement.
 
-2 - Mise en place de la sauvegarde
+https://www.figma.com/proto/gLGpqMRF9t7i8sWGHMWrGJ/Desktop?page-id=0%3A1&node-id=189-3350&p=f&viewport=1630%2C414%2C0.08&t=iAGDuQOIEK5P3sJH-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=189%3A3350&show-proto-sidebar=1 
 
-3 - Exploration du code pour voir comment cela fonctionne
+---
 
-4 - Activation du thème enfant et copie des premiers fichiers dont je vais avoir besoin
+## 🛠️ Stack technique
 
-footer.php
+- WordPress (thème enfant)
+- HTML5 / CSS3 / JavaScript 
+- jQuery
+- IntersectionObserver
+- Swiper.js (slider)
+- Animations CSS (opacity, transform, keyframes)
+- Responsive Design (media queries)
+- Modal + menu hamburger animé
+- FTP (FileZilla)
 
-front-page.php
+---
 
-functions.php
+## 🚀 Fonctionnalités mises en place
 
-header.php
+| Type | Fonctionnalité |
+|------|----------------|
+| 🎞️ | Intégration vidéo dans le hero (avec effet d’apparition) |
+| 🌀 | Animation de rotation des fleurs, accélérée au scroll |
+| 🖼️ | Apparition progressive des sections via IntersectionObserver |
+| 🧭 | Logo animé et effets au scroll |
+| ☁️ | Ajout de nuages animés avec effet **blur** |
+| 🏆 | Section Oscar ajoutée avec décor personnalisé |
+| 🎠 | Slider Swiper.js pour les personnages |
+| 📱 | Navigation mobile : menu **hamburger** avec page modale animée |
+| 🌸 | Décorations animées (fleurs, chats flottants) |
+| 📧 | Page de contact |
+| 🔐 | Page RGPD |
+| 📏 | Responsive sur tous types d’écrans |
 
-5 - Création du répertoir assets et à l'intérieur des répertoires
+---
 
--css : pour y ajouter le fichier de style du thème
+## 🔗 Lien du site
 
--fonts : pour ajouter les fonts de Google qui sont utilisées. A voir après pour les charger en local.
+🔗 *...*
 
--images : avec les nouvelles images + récupération de toutes les images actuelles pour que tous les liens pointes au même endroit.
+---
 
--js : pour y ajouter le script javacsript.
+## 🎥 Vidéo de démonstration
 
--video : pour y ajouter la vidéo du hero. A voir si on la laisse là.
-
-6 - Création d'une simple page html avec tous les élements pour faire mes essais à blanc
-
-7 - Puis, vient les étapes suivantes avec la mise en place de :
-
--la vidéo dans la hero à la place du fond.
-
-- l'effet d'apparition de la vidéo et du logo titre.
-
-- l'effet d'apparition des sections.
-
-- comportement du logo titre quand on scroll vers le bas.
-
--la rotation de toutes les fleurs (sauf celle où il y a les nuages car elles font partie de l'image de fond). A voir après pour accélérer la rotation des fleurs avec le scroll.
-
--changement du fond de la section "le lieu" et ajout des nuages avec un filtre blur sur ces derniers pour leur donner un aspect cotoneux. 
-création de la nouvelle section (oscar).
-
-8 - Réintégration des modifications dans le thème enfant.
-
-9 - Modification de l'effet d'apparition du logo titre et des différentes sections pour que cela soit uniquement géré par CSS.
-
-10 - Mise en place de la fonction IntersectionObserver pour détecter quand les sections sont à l'affichage et ne déclencher l'effêt d'apparition en fade-in qu'à ce moment là
-
-11 - Ajout d'une accéleration sur la rotation des fleurs quand on scroll.
-
-12 - Repositionnement des fleurs dans le footer au niveau de la nouvelle section Oscar.
-
-13 - Ajout de l'effet de tremblement sur le logo titre une fois qu'il est en place.
-
-14 - Mise en place du déplacement vertical des nuages en fonction du scroll.
-
-15 - Création d'un template avec un slider SWIPER pour afficher les personnages.
-
-17 - Ajout de l'effet d'apparation des titres H2 et H3 quand on scroll vers le bas en utilisant la fonction IntersectionObserver pour déclencher l'effet.
-
-18 - Modification de la nav bar :
-
-Mise en place d'un bouton hamburger à la place du menu qui fera ouvrir une page en plein écran.
-
-Mise en place d'une page modale pour afficher cette nouvelle page qui contient le menu.
-
-Ajout des décorations (chats + fleurs), selon les consignes de figma et avec les animations correspondantes (les chats flotent et les fleurs tournent).
-
-19 - Ajustement et mise en place de médias query pour être responsif.
-
-20 - Ajout de jQuery pour gérer l'apparition et la disparition de la modal pour le menu
-
-21 - Modification de l'affichage des titres h3 et du logo titre en version portable : ils étaient affichés trop petit.
-
-22 - Modifiaction de la gestion du fond du texte de la section des nominations.
-
-23 - Modification de la gestion jQuery () : encapsuler la partie jQuery dans mon fichier JS avec (function($) { // code ici })(jQuery);
-
-24 - Ajout d'une page contact et d'une page RGPD
-
-
-=> Résultat :
-
-https://github.com/user-attachments/assets/9e7001e7-f264-4d66-a61d-842ff55ff55a
-
+📽️ https://github.com/user-attachments/assets/9e7001e7-f264-4d66-a61d-842ff55ff55a
 
  => Note: 
  
